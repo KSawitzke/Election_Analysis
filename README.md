@@ -14,19 +14,23 @@ The purpose of this election audit analysis was to provide Seth and Tom with tab
     * Arapahoe: 24,801
 
     * This code snippet shows how the county tally was kept. The county_name variable takes the value from the county based on indexing each row of the voting data. If it is not found, it is added to the counties list. Then, the votes in the county_votes dictionary are incremented by 1 based on that same county_name variable. This happens within the for loop that runs over the whole dataset.
-        'if county_name not in counties:
+        '''
+        if county_name not in counties:
             counties.append(county_name)
             county_votes[county_name] = 0
-        county_votes[county_name] += 1'
+        county_votes[county_name] += 1
+        '''
 
 * Denver county has the largest number of votes, as seen when tallying each county as seen above.
 
 * Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
 * Similarly to the county count, the candidate count can be kept with an if statement to keep a running list of candidates, and a dictionary with each candidate as a key value.
-        'if candidate_name not in candidate_options:
+        '''
+        if candidate_name not in candidate_options:
             candidate_options.append(candidate_name)
             candidate_votes[candidate_name] = 0
-        candidate_votes[candidate_name] += 1'
+        candidate_votes[candidate_name] += 1
+        '''
 * This gives us the following results:
     * Charles Casper Stockham: 23.0% of the vote with 85,213 votes
     * Diana DeGette: 73.8% of the vote with 272,892 votes
